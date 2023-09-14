@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
+  <parameter name="browser" value="Edge"/>
+  <test name="Test(failed)" parallel="none">
+    <classes>
+      <class name="PageActions.RunnerClass">
+        <methods>
+          <include name="startUp"/>
+          <include name="tearDown"/>
+          <include name="patientDetails"/>
+        </methods>
+      </class> <!-- PageActions.RunnerClass -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
