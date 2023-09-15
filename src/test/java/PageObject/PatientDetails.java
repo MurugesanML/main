@@ -55,7 +55,7 @@ public class PatientDetails extends BaseClass1 {
 	public void attachment() throws Throwable {
 		driver.findElement(attachments).click();
 		Thread.sleep(5000);
-		StringSelection stringSelection = new StringSelection("C:\\Users\\VIJILALI\\eclipse-workspace\\KNila\\src\\test\\resources\\Patient Details.txt");
+		StringSelection stringSelection = new StringSelection(System.getProperty("user.dir")+"\\src\\test\\resources\\Patient Details.txt");
 		   Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 		driver.findElement(fileUpload1).click();
 		Robot robot = new Robot();
@@ -66,7 +66,7 @@ public class PatientDetails extends BaseClass1 {
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		
-//		driver.findElement(By.xpath("//input[@name='OWASP-CSRFTOKEN']")).sendKeys("C:\\Users\\VIJILALI\\eclipse-workspace\\KNila\\src\\test\\resources\\Patient Details.txt");
+//		driver.findElement(By.xpath("//input[@name='OWASP-CSRFTOKEN']")).sendKeys(System.getProperty("user.dir")+"\\src\\test\\resources\\Patient Details.txt");
 		Thread.sleep(5000);
 		driver.findElement(caption).sendKeys(propFile.getPropertyData("givenName"));
 		driver.findElement(uploadbutton).click();
