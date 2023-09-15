@@ -62,7 +62,7 @@ public class RunnerClass extends BaseClass1  {
 		System.out.println("test 4");
 		rp.pateientBack();
 	}
-	@Parameters("browser")
+	@Parameters({"browser"})
 	@BeforeClass
 	public void startUp(@Optional("Edge")String browserName) {
 		
@@ -86,7 +86,7 @@ public class RunnerClass extends BaseClass1  {
 			try {
 			TakesScreenshot ts = (TakesScreenshot)driver;
 			File source=ts.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(source, new File("C:\\Users\\VIJILALI\\eclipse-workspace\\KNila\\ScreenShots"));
+			FileUtils.copyFile(source, new File(System.getProperty("user.dir")+"\\ScreenShots"));
 			}
 			catch(Exception e) {
 				e.printStackTrace();
