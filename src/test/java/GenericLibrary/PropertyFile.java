@@ -7,7 +7,7 @@ public class PropertyFile {
 
 	 public String getPropertyData(String keysvalue) throws Throwable {
 	        Properties p = new Properties();
-	        FileInputStream fis = new FileInputStream("C:\\Users\\VIJILALI\\eclipse-workspace\\KNila\\src\\test\\resources\\testData.properties");
+	        FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\testData.properties");
 	        p.load(fis);
 	        return p.getProperty(keysvalue);
 	    }
